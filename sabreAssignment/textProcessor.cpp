@@ -6,7 +6,7 @@
 //  Copyright © 2016 Magdalena Glanowska. All rights reserved.
 //
 
-#include "TextProcessor.hpp"
+#include "textProcessor.hpp"
 #include <iostream>
 #include <cstdio>
 #include <string>

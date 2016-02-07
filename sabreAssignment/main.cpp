@@ -13,7 +13,7 @@
 #include <sstream>      // std::stringstream
 #include <exception>
 
-#include "TextProcessor.hpp"
+#include "textProcessor.hpp"
 
 void printUsage()
 {
