@@ -47,18 +47,15 @@ bool TextProcessor::isNumber(const std::string range) const
 
 std::pair<size_t, size_t> TextProcessor::parseRange() const
 {
-//    if(isNumber(m_args.getValue(RANGE_FROM)) && isNumber(m_args.getValue(RANGE_TO)))
-//    {
-    
-    size_t from = std::stoi(m_args.getValue(RANGE_FROM));
-    size_t to = std::stoi(m_args.getValue(RANGE_TO));
-
-    return std::make_pair(from, to);
-//    }
-//    else
-//    {
-//        throw std::invalid_argument{"Unknown range. Should be positive number."};
-//    }
+    try {
+        size_t from = std::stoi(m_args.getValue(RANGE_FROM));
+        size_t to = std::stoi(m_args.getValue(RANGE_TO));
+        return std::make_pair(from, to);
+    }
+    catch (const std::exception &e)
+    {
+        throw std::invalid_argument{"Unknown range. Provide numeric value."};
+    }
 }
 
 void TextProcessor::readInput(std::istream &input)
