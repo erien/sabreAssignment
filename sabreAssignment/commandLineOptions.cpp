@@ -7,6 +7,7 @@
 //
 
 #include "commandLineOptions.hpp"
+#include <algorithm>
 
 
 void CommandLineArgs::fillValidOptions()
