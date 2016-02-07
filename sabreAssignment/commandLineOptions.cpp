@@ -92,10 +92,9 @@ CommandLineArgs::parsePrefix(const std::string &val) const
 
 void CommandLineArgs::checkIfValidOption(const std::string &argument) const
 {
-    
-    if (std::find(m_validOptions.begin(), m_validOptions.end(), argument) == m_validOptions.end())
+    if(std::find(m_validOptions.begin(), m_validOptions.end(), argument) == m_validOptions.end())
     {
-        throw std::invalid_argument{"Unknown argument"};
+        throw std::invalid_argument{"Unknown argument (" + argument + ")"};
     }
 }
 

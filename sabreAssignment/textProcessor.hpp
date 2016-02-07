@@ -10,7 +10,6 @@
 #define TextProcessor_hpp
 
 #include <cstdio>
-#include <fstream>
 #include "commandLineOptions.hpp"
 
 
@@ -22,9 +21,9 @@ public:
     
     std::string get() const;
     
-    void modify(const CommandLineArgs &args);
+    void modify();
     
-    void store(const CommandLineArgs &args) const;
+    void store() const;
     
 private:
     
@@ -36,7 +35,17 @@ private:
     
     void writeToStdin() const;
     
+    void readInput(std::istream &input);
+    
+    bool isRangeSpecified() const;
+    
+    bool isNumber(const std::string s) const;
+    
+    std::pair<size_t, size_t> parseRange() const;
+
     std::string m_input;
+        
+    CommandLineArgs m_args;
 };
 
 #endif /* TextProcessor_hpp */

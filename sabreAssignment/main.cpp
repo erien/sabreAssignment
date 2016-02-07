@@ -10,7 +10,7 @@
 #include <cstdio>
 #include <fstream>
 #include <string>
-#include <sstream>      // std::stringstream
+#include <sstream>
 #include <exception>
 
 #include "textProcessor.hpp"
@@ -20,8 +20,8 @@ void printUsage()
     std::cout << "help" <<std::endl;
 }
 
-int main(int argc, const char **argv) {
-    
+int main(int argc, const char **argv)
+{
     try
     {
         CommandLineArgs args(argc, argv);
@@ -39,7 +39,7 @@ int main(int argc, const char **argv) {
         }
         catch (const std::exception &e)
         {
-            std::cerr << "Error cuured: ";
+            std::cerr << "Error ocuured: ";
             std::cerr << e.what() << std::endl;
             return 1;
         }

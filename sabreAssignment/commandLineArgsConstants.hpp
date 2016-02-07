@@ -9,7 +9,6 @@
 #ifndef commandLineArgs_hpp
 #define commandLineArgs_hpp
 
-#include <stdio.h>
 #include <string>
 
 const std::string HELP = "--help";
@@ -25,6 +24,5 @@ const std::string REPLACE_TEXT = "--replace-text";
 const std::string RANGE_FROM = "--from-line";
 
 const std::string RANGE_TO = "--to-line";
-
 
 #endif /* commandLineArgs_hpp */
