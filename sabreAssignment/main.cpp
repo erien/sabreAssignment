@@ -34,8 +34,8 @@ int main(int argc, const char **argv)
         try
         {
             TextProcessor text(args);
-            text.modify(args);
-            text.store(args);
+            text.modify();
+            text.store();
         }
         catch (const std::exception &e)
         {
