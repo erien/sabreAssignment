@@ -12,13 +12,7 @@
 #include <string>
 #include <sstream>
 #include <exception>
-
 #include "textProcessor.hpp"
-
-void printUsage()
-{
-    std::cout << "help" <<std::endl;
-}
 
 int main(int argc, const char **argv)
 {
@@ -27,7 +21,7 @@ int main(int argc, const char **argv)
         CommandLineArgs args(argc, argv);
         if(args.findOption(HELP) || args.count() == 0)
         {
-            printUsage();
+            args.printUsage();
             return 0;
         }
         
@@ -48,7 +42,6 @@ int main(int argc, const char **argv)
     {
         std::cerr << "Unable to parse command-line arguments: ";
         std::cerr << e.what() << std::endl;
-        printUsage();
         return 1;
     }
     return 0;

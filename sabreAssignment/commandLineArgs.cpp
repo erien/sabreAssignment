@@ -1,18 +1,31 @@
 //
-//  commandLineOptions.cpp
+//  CommandLineArgs.cpp
 //  sabreAssignment
 //
 //  Created by magda on 06/02/2016.
 //  Copyright © 2016 Magdalena Glanowska. All rights reserved.
 //
 
-#include "commandLineOptions.hpp"
+#include "commandLineArgs.hpp"
 #include <algorithm>
+#include <iostream>
 
 
 void CommandLineArgs::fillValidOptions()
 {
+    // TODO: m_validOptions - vector should hold args constants with descriptions
     m_validOptions = {HELP, INPUT_FILE, OUTPUT_FILE, MATCH_TEXT, REPLACE_TEXT, RANGE_FROM, RANGE_TO};
+}
+
+void CommandLineArgs::printUsage() const
+{
+    std::cout << "Valid command line options:" << std::endl;
+    // TODO: m_validOptions - vector should hold args constants with descriptions
+    for(std::vector<std::string>::const_iterator it = m_validOptions.begin() ; it != m_validOptions.end(); ++it)
+    {
+        std::cout << *it << std::endl;
+    }
+    std::cout << "Usage: [OPTION]=[OPTION_VALUE]" << std::endl;
 }
 
 std::string CommandLineArgs::getValue(const std::string &name) const

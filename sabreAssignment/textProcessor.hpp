@@ -10,7 +10,7 @@
 #define TextProcessor_hpp
 
 #include <cstdio>
-#include "commandLineOptions.hpp"
+#include "commandLineArgs.hpp"
 
 
 class TextProcessor final
@@ -38,9 +38,7 @@ private:
     void readInput(std::istream &input);
     
     bool isRangeSpecified() const;
-    
-    bool isNumber(const std::string s) const;
-    
+        
     std::pair<size_t, size_t> parseRange() const;
 
     std::string m_input;

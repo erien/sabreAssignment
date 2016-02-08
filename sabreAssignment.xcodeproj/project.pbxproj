@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		950530261C65F98500B48FDC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 950530251C65F98500B48FDC /* main.cpp */; };
 		9505302E1C65FF5C00B48FDC /* textProcessor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9505302C1C65FF5C00B48FDC /* textProcessor.cpp */; };
-		950530391C66923900B48FDC /* commandLineOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 950530371C66923900B48FDC /* commandLineOptions.cpp */; };
+		950530391C66923900B48FDC /* commandLineArgs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 950530371C66923900B48FDC /* commandLineArgs.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +30,8 @@
 		9505302C1C65FF5C00B48FDC /* textProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = textProcessor.cpp; sourceTree = "<group>"; };
 		9505302D1C65FF5C00B48FDC /* textProcessor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = textProcessor.hpp; sourceTree = "<group>"; };
 		950530351C6607F100B48FDC /* commandLineArgsConstants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = commandLineArgsConstants.hpp; sourceTree = "<group>"; };
-		950530371C66923900B48FDC /* commandLineOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = commandLineOptions.cpp; sourceTree = "<group>"; };
-		950530381C66923900B48FDC /* commandLineOptions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = commandLineOptions.hpp; sourceTree = "<group>"; };
+		950530371C66923900B48FDC /* commandLineArgs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = commandLineArgs.cpp; sourceTree = "<group>"; };
+		950530381C66923900B48FDC /* commandLineArgs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = commandLineArgs.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				950530251C65F98500B48FDC /* main.cpp */,
-				950530371C66923900B48FDC /* commandLineOptions.cpp */,
-				950530381C66923900B48FDC /* commandLineOptions.hpp */,
+				950530371C66923900B48FDC /* commandLineArgs.cpp */,
+				950530381C66923900B48FDC /* commandLineArgs.hpp */,
 				950530351C6607F100B48FDC /* commandLineArgsConstants.hpp */,
 				9505302C1C65FF5C00B48FDC /* textProcessor.cpp */,
 				9505302D1C65FF5C00B48FDC /* textProcessor.hpp */,
@@ -132,7 +132,7 @@
 			files = (
 				950530261C65F98500B48FDC /* main.cpp in Sources */,
 				9505302E1C65FF5C00B48FDC /* textProcessor.cpp in Sources */,
-				950530391C66923900B48FDC /* commandLineOptions.cpp in Sources */,
+				950530391C66923900B48FDC /* commandLineArgs.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

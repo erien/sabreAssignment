@@ -1,13 +1,13 @@
 //
-//  commandLineArgs.hpp
+//  commandLineArgsConstants.hpp
 //  sabreAssignment
 //
 //  Created by magda on 06/02/2016.
 //  Copyright © 2016 Magdalena Glanowska. All rights reserved.
 //
 
-#ifndef commandLineArgs_hpp
-#define commandLineArgs_hpp
+#ifndef commandLineArgsConstants_hpp
+#define commandLineArgsConstants_hpp
 
 #include <string>
 
@@ -25,4 +25,4 @@ const std::string RANGE_FROM = "--from-line";
 
 const std::string RANGE_TO = "--to-line";
 
-#endif /* commandLineArgs_hpp */
+#endif /* commandLineArgsConstants_hpp */

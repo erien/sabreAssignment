@@ -39,12 +39,6 @@ bool TextProcessor::isRangeSpecified() const
     return false;
 }
 
-bool TextProcessor::isNumber(const std::string range) const
-{
-    return !range.empty() &&
-            std::find_if(range.begin(), range.end(), [](char c){ return !std::isdigit(c); }) == range.end();
-}
-
 std::pair<size_t, size_t> TextProcessor::parseRange() const
 {
     try {
@@ -52,7 +46,7 @@ std::pair<size_t, size_t> TextProcessor::parseRange() const
         size_t to = std::stoi(m_args.getValue(RANGE_TO));
         return std::make_pair(from, to);
     }
-    catch (const std::exception &e)
+    catch(const std::exception &e)
     {
         throw std::invalid_argument{"Unknown range. Provide numeric value."};
     }
@@ -85,7 +79,7 @@ void TextProcessor::readFromFile(const std::string fileName)
 {
     std::ifstream inputFile(fileName);
     
-    if (!inputFile.is_open())
+    if(!inputFile.is_open())
     {
         throw std::ios_base::failure("Unable to open file: " + fileName);
     }
@@ -143,7 +137,7 @@ void TextProcessor::writeToFile(const std::string fileName) const
 {
     std::ofstream outputFile (fileName);
     
-    if (!outputFile.is_open())
+    if(!outputFile.is_open())
     {
         throw std::ios_base::failure("Unable to open file: " + fileName);
     }

@@ -1,5 +1,5 @@
 //
-//  commandLineOptions.hpp
+//  CommandLineArgs.hpp
 //  sabreAssignment
 //
 //  Created by magda on 06/02/2016.
@@ -9,7 +9,6 @@
 #ifndef commandLineOptions_hpp
 #define commandLineOptions_hpp
 
-#include <stdio.h>
 #include <deque>
 #include <string>
 #include <map>
@@ -28,6 +27,8 @@ public:
     std::string getValue(const std::string &name) const;
         
     size_t count() const;
+    
+    void printUsage() const;
     
 private:
     
